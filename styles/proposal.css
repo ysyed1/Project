@@ -1,0 +1,39 @@
+body{
+    background-color: pink;
+    color: white;
+    width: 50%;
+    outline: 5px dashed yellow;
+
+}
+
+h1{
+    text-align: center;
+    font-style: italic;
+    
+}
+
+dt{
+
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+dl{
+    
+    padding: 30px;
+
+}
+
+img{
+
+    position: absolute;
+    display: inline;
+    right: 0%;
+    margin: 10px;
+  
+}
+
+p{
+    font-size: 20em;
+
+}
