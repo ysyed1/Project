@@ -57,6 +57,92 @@
         color: #b2d3c2;
       }
 
+      h2{
+        display: block;
+        text-align: left;
+        font-family: 'Playfair Display', serif;
+        color: black;
+        
+      }
+
+    #mangolassi{
+        width: 50%;
+        height: auto;
+        display: block; 
+
+    }
+
+    p{
+        text-align: center;
+        font-family: Georgia, 'Times New Roman', Times, serif
+      
+      }
+
+    table, td, th{
+        border: 1px solid black;
+        padding: 15px;
+
+        }
+
+    table{
+        width: 50%;
+        border-collapse: collapse;
+        
+    }
+
+    th{
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    #headshot{
+        width: 260px;
+        height: auto;
+        display: block; 
+        margin-left: auto;
+        margin-right: auto;
+
+
+    }
+
+    aside{
+        display: block;
+        width: 30%;
+        float: right;
+        padding-left: 15px;
+        margin-left: 15px;
+        
+    }
+
+    #subscribe{
+        border: 1px solid black;
+        text-align: center;
+        font-style: italic;
+        font-family: 'Playfair Display', serif;
+        font-size: 1.3em;
+        
+    }
+
+    button{
+        background-color: black;
+        border: none;
+        color: white;
+        padding: 10px 15px;
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 13px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+
+    input {
+        width: 150px;
+        height: 29px;
+        
+}
+
     </style>
 </head>
 <body>
@@ -77,7 +163,68 @@
     </div>
 
     <hr>
-     
+
+    <article>
+
+    <h2>Mango Lassi Recipe</h2>
+
+    <aside>
+
+        <img id="headshot" src="images/mugphoto.JPG" alt="headshot">
+
+        <p>contact me information here</p>
+        <p>photo of me here</p>
+        <p>link to about me page</p>
+        <p>social media icon bar here</p>
+
+        <div id="subscribe">Don't miss a new recipe!
+        <p>
+        <form method="post" action="/process">
+            <label for="email"></label>
+            <input 
+                type="email" 
+                id="email"
+                name="emailaddress"
+                maxlength="100"
+                placeholder="Email address..."
+            />
+        <button type="submit">Subscribe</button>
+        </form>
+        </p>
+        </div>
+    </aside>
+
+    <img id="mangolassi" src="images/mangolassi.jpg" alt="mangolassi">
+
+    <table>
+        <th>Ingredients</th>
+        <tr>
+            <td>
+                <ul>
+                    <li>1 cup plain yogurt</li>
+                    <li>1/2 cup milk</li>
+                    <li>1 cup of canned mango pulp</li>
+                    <li>4 teaspoons honey or sugar, more or less to taste</li>
+                    <li>1/2 lemon squeezed</li>
+                    <li>Ice (optional)</li>
+                </ul>
+            </td>
+        </tr>
+        <th>Procedure</th>
+        <tr>
+            <td>
+                <ol type="1">
+                    <li>Put mango pulp, yogurt, milk, sugar and lemon into a blender and blend for 2 minutes.</li>
+                    <li>If you want a more milkshake consistency and it's a hot day, either blend in some ice as well or serve over ice cubes.</li>
+                </ol>
+            </td>
+        </tr>
+            
+    </table>
+
+    </article>
+
+    
     
 </body>
 </html>
