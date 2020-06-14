@@ -6,6 +6,8 @@
     <title>Desserts</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
 
 
 <style>
@@ -57,22 +59,36 @@
         color: #b2d3c2;
       }
 
+      hr{
+          width: 95%;
+      }
+
       h2{
         display: block;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
+        text-align: left;
         font-family: 'Playfair Display', serif;
         color: black;
+        padding: 10px 10px 30px 30px;
         
       }
 
-    img{
-        width: 50%;
-        height: auto;
+    #shahi{
+        width: 70%;
+        height: 60%;
         display: block; 
-        margin-left: auto;
-        margin-right: auto;
+        padding: 30px 30px 20px 150px;
+
+
+    }
+
+    #body{
+        width: 70%;
+    }
+
+    .align{
+        text-align: left;
+        padding: 30px 30px 10px 50px;
+        line-height: 40px;
 
     }
 
@@ -81,6 +97,140 @@
         font-family: Georgia, 'Times New Roman', Times, serif
       
       }
+
+    table, td, th{
+        border: 1px solid black;
+        padding: 15px;
+
+        }
+
+    table{
+        width: 70%;
+        height: 60%;
+        position: relative;
+        left: 13%;
+        border-collapse: collapse;
+        padding: 30px 30px 20px 150px;
+
+        
+    }
+
+    th{
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    div.sidebar {
+        vertical-align: top;
+        display: inline-block;
+        text-align: center;
+        width: 260px;
+        position: relative;
+        left: 33%;
+
+}
+
+    #headshot{
+        width: 260px;
+        height: auto;
+        display: block; 
+
+    }
+    .caption {
+        display: block;
+        position: relative;
+
+}
+
+    #curly{
+        color: #b2d3c2;
+        font-family: 'Parisienne', cursive;
+        font-size: 30px;
+
+    }
+
+    aside{
+        position: relative;
+        display: block;
+        width: 30%;
+        float: right;
+        padding-left: 15px;
+        margin-left: 15px;
+        
+    }
+
+
+    #subscribe{
+        width: 300px;
+        border: 1px solid black;
+        text-align: center;
+        font-style: italic;
+        font-family: 'Playfair Display', serif;
+        font-size: 1.3em;
+        position: relative;
+        left: 30%;
+        
+    }
+
+    button{
+        background-color: black;
+        border: none;
+        color: white;
+        padding: 10px 15px;
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 13px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+
+    input {
+        width: 150px;
+        height: 29px;
+        
+}
+
+    .vl {
+        border-left: 1px solid black;
+        height: 2000px;
+        position: absolute;
+        left: 75%;
+        margin-left: -3px;
+        top: 23%;
+}
+
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #b2d3c2;
+        color: white;
+        text-align: center;
+}
+
+      .footer a {
+        padding: 14px 16px;
+        text-decoration: none;
+        font-family: 'Playfair Display', serif;        
+        text-transform: uppercase;
+        color: white;
+      }
+
+      .footer a:visited{
+        color: white;
+      }
+
+      .footer a:hover {
+        color: black;
+      }
+      
+      .footer a:active {
+        color: black;
+      }
+
 
 
 </style>
@@ -104,11 +254,102 @@
 
     <hr>
 
-
     <h2>Shahi Tukda Recipe</h2>
 
-    <img src="images/shahitukda.jpg" alt="shahi">
+    <div class="vl"></div>
 
+    <aside>
+        <div class="sidebar">
+
+        <img id="headshot" src="images/mugphoto.JPG" alt="headshot" title="headshot">
+        <span class="caption">
+
+        <p>Hello! I'm Yusra. Over the past few months, I have spent time in the kitchen learning my mom's secret recipes.
+        I am, by no means, a culinary expert, but I want to share some of my FAVORITE recipes with you all. 
+        </p>
+        <a href="aboutme.html">Click here for more!</a>
+
+        <p id="curly">Love, Yusra</p>
+
+        <p>social media icon bar here</p>
+
+        </span>
+        </div>
+
+
+        <div id="subscribe">Don't miss a new recipe!
+        <p>
+        <form method="post" action="/process">
+            <label for="email"></label>
+            <input 
+                type="email" 
+                id="email"
+                name="emailaddress"
+                maxlength="100"
+                placeholder="Email address..."
+            />
+        <button id="submit" type="submit">Subscribe</button>
+        </form>
+        </p>
+        </div>
+
+    </aside>
+
+    <div id="body">
+
+    <p class="align">'Shahi Tukda' also known as 'Double ka Meetha' is a Hyderabi delicacy, comparable to American bread pudding. This
+        is my personal favorite Indian dessert or 'meetha', the perfect combination of comforting and decadent. I first fell in love with
+        the dessert when tasting it at my family's favorite restaurant in Toronto. My mom's family lives in Mississauga, Ontario, so we have 
+        pretty much taste-tested every Indian restaurant worth the visit. 
+    </p>
+
+    <p class="align">Whenever we return home from Canada, I always crave this dessert, and so my mom perfected her recipe to make the infamous 
+        'Shahi Tukda' at home. The recipe is simple, yet delicious! Give it a try and let me know what you think :)
+
+    </p>
+
+    <img id="shahi" src="images/shahitukda.jpg" alt="shahi" title="shahi">
+
+    <p>
+    <table>
+        <th>Ingredients</th>
+        <tr>
+            <td>
+                <ul>
+                    <li>5 bread slices</li>
+                    <li>1/2 cup ghee</li>
+                    <li>1/2 ml water</li>
+                    <li>1/2 cup sugar</li>
+                    <li>2 crushed black cardamom</li>
+                    <li>6 strand saffron</li>
+                    <li>3 cup milk</li>
+                    <li>2 pinched powdered green cardamom</li>
+                    <li>1 handful cashews</li>
+                    <li>1 handful almonds</li>
+                    <li>1 handful pistachios</li>
+                    <li>2 tablespoon sugar</li>
+                </ul>
+            </td>
+        </tr>
+        <th>Procedure</th>
+        <tr>
+            <td>
+                <ol type="1">
+                    <li>Take a saucepan and heat water along with sugar, once the sugar dissolves add the saffron strands. Let it boil, till the syrup achieves two string consistency. Once the sugar syrup turns a little thick. Put off the stove and keep aside.</li>
+                    <li>Take another pan, boil the milk in medium flame until the milk is reduced to about 1/4th of its original quantity. Do not forget to stir continuously, once the milk is reduced, add cardamom powder, 1/4th part of sugar syrup and mix well. Continue to heat it by stirring continuously for 5 more minutes. Once done, remove the pan from the flame and your rabri is ready. Keep aside until required.</li>
+                    <li>Now, take the bread slices and cut their sides and slice it as two triangles. Then, heat ghee in a pan and shallow fry the bread until they are crisp and golden brown on each side. Once the bread slices are fried, soak each slice in the remaining sugar syrup for about a minute.</li>
+                    <li>Arrange it on the serving dish. Pour the prepared rabri over the bread slices and garnish with the chopped nuts. If you are in a jiffy you can also use condensed milk.</li>
+                </ol>
+            </td>
+        </tr>
+            
+    </table>
+</p>
+</div>
+
+<div class="footer">
+    <p><a href="sitemap.html">Site Map</a></p>
+  </div>
      
     
 </body>

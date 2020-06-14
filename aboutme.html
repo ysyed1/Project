@@ -6,6 +6,8 @@
     <title>About Me</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
 
 
 <style>
@@ -20,24 +22,6 @@
         font-size: 3em;
         
       }
-
-    h2{
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-        font-family: 'Playfair Display', serif;
-        color: black;
-        
-      }
-
-    img{
-        width: 400px;
-        margin: 30px;
-        display: block; 
-        margin-left: auto;
-        margin-right: auto;
-    }
 
     .navbar{
         width: 70%;
@@ -75,13 +59,181 @@
         color: #b2d3c2;
       }
 
-      p{
+      hr{
+          width: 95%;
+      }
+
+      h2{
+        display: block;
+        text-align: left;
+        font-family: 'Playfair Display', serif;
+        color: black;
+        padding: 10px 10px 30px 30px;
+        
+      }
+
+    #me{
+        width: 100px;
+        display: block; 
+        padding: 30px 30px 20px 150px;
+
+    }
+
+    #body{
+        width: 70%;
+    }
+
+    .align{
+        text-align: left;
+        padding: 30px 30px 10px 50px;
+        line-height: 40px;
+
+    }
+
+    p{
         text-align: center;
         font-family: Georgia, 'Times New Roman', Times, serif
       
       }
 
+    div.sidebar {
+        vertical-align: top;
+        display: inline-block;
+        text-align: center;
+        width: 260px;
+        position: relative;
+        left: 33%;
 
+}
+
+    #headshot{
+        width: 260px;
+        height: auto;
+        display: block; 
+
+    }
+    .caption {
+        display: block;
+        position: relative;
+
+}
+
+    #curly{
+        color: #b2d3c2;
+        font-family: 'Parisienne', cursive;
+        font-size: 30px;
+
+    }
+
+    aside{
+        position: relative;
+        display: block;
+        width: 30%;
+        float: right;
+        padding-left: 15px;
+        margin-left: 15px;
+        
+    }
+
+
+    #subscribe{
+        width: 300px;
+        border: 1px solid black;
+        text-align: center;
+        font-style: italic;
+        font-family: 'Playfair Display', serif;
+        font-size: 1.3em;
+        position: relative;
+        left: 30%;
+        
+    }
+
+    button{
+        background-color: black;
+        border: none;
+        color: white;
+        padding: 10px 15px;
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 13px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+
+    input {
+        width: 150px;
+        height: 29px;
+        
+}
+
+    .vl {
+        border-left: 1px solid black;
+        height: 2000px;
+        position: absolute;
+        left: 75%;
+        margin-left: -3px;
+        top: 23%;
+}
+
+        
+    #feedback {
+        width: 70%;
+        height: 60%;
+        text-align: left;
+        display: block; 
+        position: relative;
+        left: 15%;
+        padding: 30px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 15px;
+        background-color: #b2d3c2;
+        color: black;
+        }
+
+    .feedback-btn{
+        background-color: white;
+        color: black;
+           
+        }
+
+    .space{
+        text-align: left;
+
+
+        }
+
+
+      .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #b2d3c2;
+        color: white;
+        text-align: center;
+}
+
+      .footer a {
+        padding: 14px 16px;
+        text-decoration: none;
+        font-family: 'Playfair Display', serif;        
+        text-transform: uppercase;
+        color: white;
+      }
+
+      .footer a:visited{
+        color: white;
+      }
+
+      .footer a:hover {
+        color: black;
+      }
+      
+      .footer a:active {
+        color: black;
+      }
 
 </style>
 
@@ -107,12 +259,127 @@
      
 
     <h2>About Me</h2>
-    
-    <img src="images/mugphoto.JPG" alt="headshot">
 
-    <p>Hi! I'm Yusra Syed. </p>
+    <div class="vl"></div>
+
+    <aside>
+        <div class="sidebar">
+
+        <img id="headshot" src="images/mugphoto.JPG" alt="headshot" title="headshot">
+        <span class="caption">
+
+        <p>Hello! I'm Yusra. Over the past few months, I have spent time in the kitchen learning my mom's secret recipes.
+        I am, by no means, a culinary expert, but I want to share some of my FAVORITE recipes with you all. 
+        </p>
+        <a href="aboutme.html">Click here for more!</a>
+
+        <p id="curly">Love, Yusra</p>
+
+        <p>social media icon bar here</p>
+
+        </span>
+        </div>
+
+
+        <div id="subscribe">Don't miss a new recipe!
+        <p>
+        <form method="post" action="/process">
+            <label for="email"></label>
+            <input 
+                type="email" 
+                id="email"
+                name="emailaddress"
+                maxlength="100"
+                placeholder="Email address..."
+            />
+        <button id="submit" type="submit">Subscribe</button>
+        </form>
+        </p>
+        </div>
+
+    </aside>
+
+    <div id="body">
 
     
+    <img id="me" src="images/mugphoto.JPG" alt="headshot" title="headshot">
+
+    <p class="align">Hi! I'm Yusra Syed. </p>
+    <p class="align"> Email: <a href="mailto:yusrasyed1@gmail.com">yusrasyed1@gmail.com</a> </p>
+    <p class="align">Instagram: @yusrasyed1</p>
+
+    <h2>Feedback Form</h2>
+    <form id="feedback" method="post" action="/process">
+        <label for="FirstName">Name:</label>
+        <input 
+            type="text" 
+            id="FirstName"
+            name="FirstName"
+            maxlength="100"
+            placeholder="Name..."
+        />
+        <p class="space">
+        <label for="email">Email:</label>
+        <input 
+            type="email" 
+            id="email"
+            name="emailaddress"
+            maxlength="100"
+            placeholder="Email..."
+        />
+        </p>
+
+        <p class="space">
+        <div>
+            Are you subscribed to Chef Yusra Company?
+            <div>
+                
+                <input type="radio" name="response" value="yes" />
+                <label for="yes">Yes</label>
+            
+                <input type="radio" name="response" value="no" />
+                <label for="no">No</label>
+
+        </div>
+        </div>
+
+        </p>
+
+        <p class="space">
+        <div>My favorite recipes are:
+
+        <div>
+            <input type="checkbox" id="bhel" name="recipe" value="bhel"/>
+            <label for="bhel">Bhel Puri</label><br>
+            <input type="checkbox" id="biryani" name="recipe" value="biryani"/>
+            <label for="biryani">Chicken Biryani</label><br>
+            <input type="checkbox" id="mangolassi" name="recipe" value="mangolassi"/>
+            <label for="mangolassi">Mango Lassi</label><br>
+            <input type="checkbox" id="shahi" name="recipe" value="shahi"/>
+            <label for="shahi">Shahi Tukda</label>
+        </div>
+        </div>
+        </p>
+
+        <p class="space">
+            <div>
+                <label>Comments:</label><br>
+                <textarea name="reply" id="reply" cols="100" rows="10" placeholder="Enter your comment here..."></textarea>
+            </div>
+        </p>
+
+        <button class="feedback-btn" type="submit">Submit</button>
+
+        <button class="feedback-btn" type="reset">Reset</button>
+
+
+    </form>
+
+    <div class="footer">
+        <p><a href="sitemap.html">Site Map</a></p>
+      </div>
+
+    </div>
     
 </body>
 </html>

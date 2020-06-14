@@ -11,20 +11,40 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
 
     <style>
 
-     input[type=text] {
-        width: 17%;
-        box-sizing: border-box;
-        border: 1px solid gray;
-        border-radius: 4px;
-        font-size: 16px;
-        background-position: 10px 10px; 
-        background-repeat: no-repeat;
-        padding: 12px 20px 12px 40px;
-} 
+    #search-text {
+        border-top:thin solid  #e5e5e5;
+        border-right:thin solid #e5e5e5;
+        border-bottom:0;
+        border-left:thin solid  #e5e5e5;
+        box-shadow:0px 1px 1px 1px #e5e5e5;
+        float:left;
+        height:17px;
+        margin:.8em 0 0 .5em; 
+        outline:0;
+        padding: .4em 0 .4em .6em;
+        width:183px; 
+    }
+    
+    #button-holder{
+        background-color: #f1f1f1;
+        border-top:thin solid #e5e5e5;
+        box-shadow: 1px 1px 1px 1px #e5e5e5;
+        cursor:pointer;
+        float:left;
+        height:27px;
+        margin:11px 0 0 0;
+        text-align: center;
+        width:50px;
+}
+  
+    #button-holder img{
+        margin:4px;
+        width:20px; 
+}
 
 
       h1{
@@ -74,12 +94,147 @@
         color: #b2d3c2;
       }
 
+      hr{
+          width: 95%;
+      }
+
+      h2{
+        display: block;
+        text-align: left;
+        font-family: 'Playfair Display', serif;
+        color: black;
+        padding: 10px 10px 30px 30px;
+        
+      }
+
+      #body{
+        width: 70%;
+
+    }
+
+    .align{
+        text-align: left;
+        padding: 30px 30px 10px 50px;
+        line-height: 40px;
+
+    }
+
       p{
         text-align: center;
         font-family: Georgia, 'Times New Roman', Times, serif
       
       }
+      div.sidebar {
+        vertical-align: top;
+        display: inline-block;
+        text-align: center;
+        width: 260px;
+        position: relative;
+        left: 33%;
 
+}
+
+    #headshot{
+        width: 260px;
+        height: auto;
+        display: block; 
+
+    }
+    .caption {
+        display: block;
+        position: relative;
+
+}
+
+    #curly{
+        color: #b2d3c2;
+        font-family: 'Parisienne', cursive;
+        font-size: 30px;
+
+    }
+
+    aside{
+        position: relative;
+        display: block;
+        width: 30%;
+        float: right;
+        padding-left: 15px;
+        margin-left: 15px;
+        
+    }
+
+
+    #subscribe{
+        width: 300px;
+        border: 1px solid black;
+        text-align: center;
+        font-style: italic;
+        font-family: 'Playfair Display', serif;
+        font-size: 1.3em;
+        position: relative;
+        left: 30%;
+        
+    }
+
+    button{
+        background-color: black;
+        border: none;
+        color: white;
+        padding: 10px 15px;
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 13px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+
+    input {
+        width: 150px;
+        height: 29px;
+        
+}
+
+    .vl {
+        border-left: 1px solid black;
+        height: 2000px;
+        position: absolute;
+        left: 75%;
+        margin-left: -3px;
+        top: 23%;
+}
+
+
+      .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #b2d3c2;
+        color: white;
+        text-align: center;
+}
+
+      .footer a {
+        padding: 14px 16px;
+        text-decoration: none;
+        font-family: 'Playfair Display', serif;        
+        text-transform: uppercase;
+        color: white;
+      }
+
+      .footer a:visited{
+        color: white;
+      }
+
+      .footer a:hover {
+        color: black;
+      }
+      
+      .footer a:active {
+        color: black;
+      }
 
       </style>
     
@@ -87,17 +242,19 @@
 </head>
 <body>
 
-  
-  <div>
-    <input type="text" name="search" placeholder="Search...">
-  </div> 
+  <div class="search">
+      <input type="text" id="search-text" placeholder="Search..." />
+  </div>
 
+  <div id="button-holder">
+    <img src="images/searchicon3.png" alt="searchicon" title="searchicon"/>
+  </div>
 
     <h1>Chef Yusra Company</h1>
  
     <hr>
-  
 
+  
     <div class="navbar">
           <a href="index.html">Home</a>
           <a href="bhel.html">Appetizers</a>
@@ -109,14 +266,59 @@
 
     <hr>
      
+    <h2>Welcome to Chef Yusra Company!</h2>
 
-    <p> Welcome to Chef Yusra Company! I stole my mom's cookbook to share popular everyday 
-        recipes from my South Asian household with you all, combining my love for cooking 
-        and Indian culture. While these delicacies may be enjoyed at Indian restaurants, they
-        can also be made at home with only a few ingredients. Posted are recipes for beverages, 
-        appetizers, entrees, and desserts! </p>
+    <div class="vl"></div>
+
+    <aside>
+        <div class="sidebar">
+
+        <img id="headshot" src="images/mugphoto.JPG" alt="headshot" title="headshot">
+        <span class="caption">
+
+        <p>Hello! I'm Yusra. Over the past few months, I have spent time in the kitchen learning my mom's secret recipes.
+        I am, by no means, a culinary expert, but I want to share some of my FAVORITE recipes with you all. 
+        </p>
+        <a href="aboutme.html">Click here for more!</a>
+
+        <p id="curly">Love, Yusra</p>
+
+        <p>social media icon bar here</p>
+
+        </span>
+        </div>
+
+
+        <div id="subscribe">Don't miss a new recipe!
+        <p>
+        <form method="post" action="/process">
+            <label for="email"></label>
+            <input 
+                type="email" 
+                id="email"
+                name="emailaddress"
+                maxlength="100"
+                placeholder="Email address..."
+            />
+        <button id="submit" type="submit">Subscribe</button>
+        </form>
+        </p>
+        </div>
+
+    </aside>
+
+    <div id="body">
+
+
+    <p class="align"> I stole my mom's cookbook to share popular everyday recipes from my South Asian household with you all, combining my love for cooking 
+        and Indian culture. While these delicacies may be enjoyed at Indian restaurants, they can also be made at home with only a few ingredients. 
+        Posted are recipes for beverages, appetizers, entrees, and desserts! </p>
         
+    </div>
 
-    
+    <div class="footer">
+      <p><a href="sitemap.html">Site Map</a></p>
+    </div>
+
 </body>
 </html>

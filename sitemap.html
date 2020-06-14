@@ -3,36 +3,209 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sitemap</title>
+    <title>Site Map</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
 
 <style>
 
-    body{
+h1{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        font-family: 'Playfair Display', serif;
+        color: #b2d3c2;
+        font-size: 3em;
+        
+      }
+
+    .navbar{
+        width: 70%;
+        overflow: hidden;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        
+        
+      }
+      
+      .navbar a {
+        padding: 14px 16px;
+        text-decoration: none;
+        font-family: 'Playfair Display', serif;        
+        text-transform: uppercase;
+     
+      }
+
+      a:link{
+        color: black;
+
+      }
+
+      a:visited{
+        color: black;
+      }
+
+      a:hover {
+        color: #b2d3c2 ;
+      }
+      
+      a:active {
+        color: #b2d3c2;
+      }
+
+      hr{
+          width: 95%;
+      }
+
+      h2{
+        display: block;
+        text-align: left;
+        font-family: 'Playfair Display', serif;
+        color: black;
+        padding: 10px 10px 30px 30px;
+        text-decoration: underline;
+
+      }
+
+    #body{
         background-color: white;
         margin-right: 100px;
-        margin-left: 200px;
+        margin-left: 150px;
+        width: 70%;
     }
 
-    h1{
-        font-family: "Times New Roman", Times, serif;
-        color: navy;
-        text-align: center
-    }
-
-    h3{
-        font-family: Apple Chancery, cursive;
-        color:white;
-        font-size: 1.2em;
-    }
-
-    img{
-        width: 50px;
-    }
 
     p{
-        font-family: "Times New Roman", Times, serif;
-        color: navy;
+        font-family: 'Playfair Display', serif;
+        color: black;
     }
+
+    .indent{
+        text-indent: 50px;
+        margin-bottom: 40px;
+    }
+
+    .horizontal{
+        display: inline-block;
+        margin-left: 110px;
+        
+    }
+
+    div.sidebar {
+        vertical-align: top;
+        display: inline-block;
+        text-align: center;
+        width: 260px;
+        position: relative;
+        left: 33%;
+
+}
+
+    #headshot{
+        width: 260px;
+        height: auto;
+        display: block; 
+
+    }
+    .caption {
+        display: block;
+        position: relative;
+
+}
+
+    #curly{
+        color: #b2d3c2;
+        font-family: 'Parisienne', cursive;
+        font-size: 30px;
+
+    }
+
+    aside{
+        position: relative;
+        display: block;
+        width: 30%;
+        float: right;
+        padding-left: 15px;
+        margin-left: 15px;
+        
+    }
+
+
+    #subscribe{
+        width: 300px;
+        border: 1px solid black;
+        text-align: center;
+        font-style: italic;
+        font-family: 'Playfair Display', serif;
+        font-size: 1.3em;
+        position: relative;
+        left: 30%;
+        
+    }
+
+    button{
+        background-color: black;
+        border: none;
+        color: white;
+        padding: 10px 15px;
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 13px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+
+    input {
+        width: 150px;
+        height: 29px;
+        
+}
+
+    .vl {
+        border-left: 1px solid black;
+        height: 2000px;
+        position: absolute;
+        left: 75%;
+        margin-left: -3px;
+        top: 23%;
+}
+
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #b2d3c2;
+        color: white;
+        text-align: center;
+}
+
+      .footer a {
+        padding: 14px 16px;
+        text-decoration: none;
+        font-family: 'Playfair Display', serif;        
+        text-transform: uppercase;
+        color: white;
+      }
+
+      .footer a:visited{
+        color: white;
+      }
+
+      .footer a:hover {
+        color: black;
+      }
+      
+      .footer a:active {
+        color: black;
+      }
 
 
 </style>
@@ -40,24 +213,116 @@
 </head>
 <body>
 
-    <h1>Recipes</h1>
+    <h1>Chef Yusra Company</h1>
 
 
-    <h3>
-        <p>i. <a href="biryani.html">Chicken Biryani Recipe</a></p>
-        <p>ii. <a href="bhel.html">Bhel Puri Recipe</a></p>
-        <p>iii. <a href="mangolassi.html">Mango Lassi Recipe</a></p>
-        <p>iv. <a href="shahi.html">Shahi Tukra Recipe</a></p>
-       
-        
-    </h3>
+    <hr>
+  
 
-    
+    <div class="navbar">
+          <a href="index.html">Home</a>
+          <a href="bhel.html">Appetizers</a>
+          <a href="biryani.html">Entrees</a>
+          <a href="shahi.html">Desserts</a>
+          <a href="mangolassi.html">Beverages</a>
+          <a href="aboutme.html">About Me</a>
+    </div>
+
+    <hr>
+
+    <h2>Site Map</h2>
+
+    <div class="vl"></div>
+
+    <aside>
+        <div class="sidebar">
+
+        <img id="headshot" src="images/mugphoto.JPG" alt="headshot" title="headshot">
+        <span class="caption">
+
+        <p>Hello! I'm Yusra. Over the past few months, I have spent time in the kitchen learning my mom's secret recipes.
+        I am, by no means, a culinary expert, but I want to share some of my FAVORITE recipes with you all. 
+        </p>
+        <a href="aboutme.html">Click here for more!</a>
+
+        <p id="curly">Love, Yusra</p>
+
+        <p>social media icon bar here</p>
+
+        </span>
+        </div>
+
+
+        <div id="subscribe">Don't miss a new recipe!
+        <p>
+        <form method="post" action="/process">
+            <label for="email"></label>
+            <input 
+                type="email" 
+                id="email"
+                name="emailaddress"
+                maxlength="100"
+                placeholder="Email address..."
+            />
+        <button id="submit" type="submit">Subscribe</button>
+        </form>
+        </p>
+        </div>
+
+    </aside>
+
+        <div id="body">
+
+            <div class="horizontal">
+
+                <p>Entrees</p>
+
+                <p class="indent">i. <a href="biryani.html">Chicken Biryani</a></p>
+                <p class="indent">ii. <a href="">Masala Dosa</a></p>
+                <p class="indent">iii. <a href="">Haleem</a></p>
+
+            </div>
+
+            <div class="horizontal">
+
+                <p>Appetizers</p>
+
+                <p class="indent">i. <a href="bhel.html">Bhel Puri</a></p>
+                <p class="indent">ii. <a href="">Aloo Samosa</a></p>
+                <p class="indent">iii. <a href="">Baigan Pakoras</a></p>
+
+            </div>
+
+            <div class="horizontal">
+
+                <p>Beverages</p>
+
+                <p class="indent">i. <a href="mangolassi.html">Mango Lassi</a></p>
+                <p class="indent">ii. <a href="">Masala Chai</a></p>
+                <p class="indent">iii. <a href="">Rooh Afza</a></p>
+
+            </div>
+
+            <div class="horizontal">
+
+                <p>Desserts</p>
+
+                <p class="indent">i. <a href="shahi.html">Shahi Tukda</a></p>
+                <p class="indent">ii. <a href="">Gajar ka Halwa</a></p>
+                <p class="indent">iii. <a href="">Gheer</a></p>
+
+            </div>
+ 
     <p>
-        <a href="index.html">
-        <img src="images/home.jpg" alt="Home">
-        </a>
+        <a href="index.html">Home</a>
+        
     </p>
+
+    </div>
+
+    <div class="footer">
+        <p><a href="sitemap.html">Site Map</a></p>
+      </div>
 
 </body>
 </html>
