@@ -18,6 +18,10 @@
   gtag('config', 'UA-54516992-1');
 </script>
 
+<!--favicon-->
+
+<link rel="shortcut icon" href="images/favicon.png" type="image/png">
+
 
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
     
@@ -25,6 +29,48 @@
 
 
 <style>
+
+    #search-text {
+        border-top:thin solid  #e5e5e5;
+        border-right:thin solid #e5e5e5;
+        border-bottom:0;
+        border-left:thin solid  #e5e5e5;
+        box-shadow:0px 1px 1px 1px #e5e5e5;
+        float:left;
+        height:17px;
+        margin:.8em 0 0 .5em; 
+        outline:0;
+        padding: .4em 0 .4em .6em;
+        width:183px; 
+    }
+
+    .header {
+        position: relative;
+    }
+
+    .search {
+        position: absolute;
+        left: 100px;
+        top: 10px;
+      }
+    
+    #button-holder{
+        background-color: #f1f1f1;
+        border-top:thin solid #e5e5e5;
+        box-shadow: 1px 1px 1px 1px #e5e5e5;
+        cursor:pointer;
+        float:left;
+        height:27px;
+        margin:11px 0 0 0;
+        text-align: center;
+        width:50px;
+}
+  
+    #button-holder img{
+        margin:4px;
+        width:20px; 
+}
+
 
     h1{
         display: block;
@@ -87,7 +133,7 @@
       }
 
     #me{
-        width: 100px;
+        width: 400px;
         display: block; 
         padding: 30px 30px 20px 150px;
 
@@ -120,12 +166,14 @@
 
 }
 
-    #headshot{
+    #headshot {
         width: 260px;
         height: auto;
         display: block; 
 
     }
+
+    
     .caption {
         display: block;
         position: relative;
@@ -206,18 +254,23 @@
         color: black;
         }
 
-    .feedback-btn{
+    #submit-btn {
         background-color: white;
         color: black;
            
         }
+
+    #reset-btn {
+        background-color: white;
+        color: black;
+
+    }
 
     .space{
         text-align: left;
 
 
         }
-
 
       .footer {
         position: fixed;
@@ -254,7 +307,17 @@
 </head>
 <body>
 
+  <div class="header">
+    <div class="search">
+      <input type="text" id="search-text" placeholder="Search..." />
+
+  <div id="button-holder">
+    <img src="images/searchicon3.png" alt="searchicon" title="searchicon"/>
+  </div>
+  </div>
+
     <h1>Chef Yusra Company</h1>
+    </div>
 
 
     <hr>
@@ -315,7 +378,6 @@
 
     <div id="body">
 
-    
     <img id="me" src="images/mugphoto.JPG" alt="headshot" title="headshot">
 
     <p class="align">Hi! I'm Yusra Syed. </p>
@@ -324,11 +386,11 @@
 
     <h2>Feedback Form</h2>
     <form id="feedback" method="post" action="/process">
-        <label for="FirstName">Name:</label>
+        <label for="firstName">Name:</label>
         <input 
             type="text" 
-            id="FirstName"
-            name="FirstName"
+            id="firstName"
+            name="firstName"
             maxlength="100"
             placeholder="Name..."
         />
@@ -382,9 +444,9 @@
             </div>
         </p>
 
-        <button class="feedback-btn" type="submit">Submit</button>
+        <button id="submit-btn" type="submit">Submit</button>
 
-        <button class="feedback-btn" type="reset">Reset</button>
+        <button id="reset-btn" type="reset">Reset</button>
 
 
     </form>
@@ -394,6 +456,74 @@
       </div>
 
     </div>
+
+    <script>
+
+      function checkForm() {
+
+        let x = document.forms["feedback"]["firstName"].value;
+        let y = document.forms["feedback"]["email"].value;
+
+        if (x == "" || y == ""){
+          alert("Please enter your name and email!");
+          return false;
+
+        }
+      }
+
+      function firstClick(){
+
+        document.querySelector("h2").style.color = "#b2d3c2";
+        document.querySelector("h2").style.fontStyle = "bold";
+
+      }
+
+      function secondClick(){
+
+        document.querySelector("h2").style.color = "pink";
+        document.querySelector("h2").style.fontStyle = "italic";
+
+      }
+
+      function fadeImage(){
+
+        document.getElementById("me").style.opacity = "0.5";
+
+      }
+
+      function unfadeImage(){
+
+        document.getElementById("me").style.opacity = "1";
+
+      }
+
+      document.getElementById("submit-btn").onclick = function(){
+            checkForm();
+
+      }
+
+      document.querySelector("h2").onclick = function() {
+            firstClick();
+
+      }
+
+      document.querySelector("h2").ondblclick = function() {
+            secondClick();
+
+      }
+
+      document.getElementById("me").onmouseover = function() {
+            fadeImage();
+
+      }
+
+      document.getElementById("me").onmouseout = function() {
+            unfadeImage();
+
+      }
+
+
+    </script>
     
 </body>
 </html>

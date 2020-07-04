@@ -43,6 +43,16 @@
         padding: .4em 0 .4em .6em;
         width:183px; 
     }
+
+    .header {
+        position: relative;
+    }
+
+    .search {
+        position: absolute;
+        left: 100px;
+        top: 10px;
+      }
     
     #button-holder{
         background-color: #f1f1f1;
@@ -65,11 +75,11 @@
       h1{
         display: block;
         margin-left: auto;
-        margin-right: auto;
+        margin-right: auto; 
         text-align: center;
         font-family: 'Playfair Display', serif;
         color: #b2d3c2;
-        font-size: 3em;
+        font-size: 3em; 
         
       }
 
@@ -113,7 +123,7 @@
           width: 95%;
       }
 
-      h2{
+      h2 {
         display: block;
         text-align: left;
         font-family: 'Playfair Display', serif;
@@ -122,23 +132,34 @@
         
       }
 
-      #body{
+      #body {
         width: 70%;
 
     }
 
-    .align{
+    .align {
         text-align: left;
         padding: 30px 30px 10px 50px;
         line-height: 40px;
 
     }
 
-      p{
+      p {
         text-align: center;
         font-family: Georgia, 'Times New Roman', Times, serif
       
       }
+
+      #myphotos {
+
+        border: 10px solid pink;
+        width: 850px;
+        margin: 20px 30px 20px 120px;
+        position: relative;
+        left: 5%;
+
+    }
+
       div.sidebar {
         vertical-align: top;
         display: inline-block;
@@ -155,6 +176,7 @@
         display: block; 
 
     }
+
     .caption {
         display: block;
         position: relative;
@@ -251,21 +273,24 @@
         color: black;
       }
 
+
       </style>
     
 
 </head>
 <body>
 
-  <div class="search">
+  <div class="header">
+    <div class="search">
       <input type="text" id="search-text" placeholder="Search..." />
-  </div>
 
   <div id="button-holder">
     <img src="images/searchicon3.png" alt="searchicon" title="searchicon"/>
   </div>
+  </div>
 
     <h1>Chef Yusra Company</h1>
+    </div>
  
     <hr>
 
@@ -324,8 +349,9 @@
 
     <div id="body">
 
+    <img src="images/shaadi.JPG" alt="myphotos" title="myphotos" id="myphotos">
 
-    <p class="align"> I stole my mom's cookbook to share popular everyday recipes from my South Asian household with you all, combining my love for cooking 
+    <p class="align"> I stole my mom's cookbook to share popular everyday recipes from my South Asian household with you all, combining my love for cooking
         and Indian culture. While these delicacies may be enjoyed at Indian restaurants, they can also be made at home with only a few ingredients. 
         Posted are recipes for beverages, appetizers, entrees, and desserts! </p>
         
@@ -334,6 +360,45 @@
     <div class="footer">
       <p><a href="sitemap.html">Site Map</a></p>
     </div>
+
+
+    <script>
+
+        const photos = [
+            "images/shaadi.JPG", 
+            "images/mehndi.jpg", 
+
+        ];
+
+        let i = 0;
+
+        const image = document.querySelector("#myphotos");
+
+        function slideShow(){
+           
+            console.log("playing my photo slides...");
+
+            if (i === photos.length){
+                i = 0;
+            }
+
+            image.src = photos[i];
+
+            console.log(i);
+            i = i + 1;
+
+            setTimeout(slideShow, 1000);
+
+        }
+
+
+        document.querySelector("body").onload = function() {
+            slideShow();
+
+        };
+
+
+    </script>
 
 </body>
 </html>
