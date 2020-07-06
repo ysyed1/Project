@@ -27,6 +27,7 @@
     
     <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
 
+    <script src="https://js.cx/libs/animate.js"></script>
 
 <style>
 
@@ -156,6 +157,19 @@
       
       }
 
+    #myIntro {
+        line-height: 60px;
+        text-align: left;
+        padding: 30px 30px 10px 50px;
+
+    }
+
+    #aboutme-btn {
+        position: relative;
+        left: 48%;
+
+    }
+
     div.sidebar {
         vertical-align: top;
         display: inline-block;
@@ -269,7 +283,6 @@
     .space{
         text-align: left;
 
-
         }
 
       .footer {
@@ -301,6 +314,7 @@
       .footer a:active {
         color: black;
       }
+
 
 </style>
 
@@ -380,7 +394,12 @@
 
     <img id="me" src="images/mugphoto.JPG" alt="headshot" title="headshot">
 
-    <p class="align">Hi! I'm Yusra Syed. </p>
+    <button id="aboutme-btn">About Me</button>
+
+    <p id="myIntro"></p>
+
+    <h2>Contact Me</h2>
+
     <p class="align"> Email: <a href="mailto:yusrasyed1@gmail.com">yusrasyed1@gmail.com</a> </p>
     <p class="align">Instagram: @yusrasyed1</p>
 
@@ -459,6 +478,8 @@
 
     <script>
 
+      // validating form, add processing aspect 
+
       function checkForm() {
 
         let x = document.forms["feedback"]["firstName"].value;
@@ -470,6 +491,9 @@
 
         }
       }
+
+      // changing text style (font style and color) on click and double click
+      // must change text content too ... maybe "Click button for more info"
 
       function firstClick(){
 
@@ -485,6 +509,8 @@
 
       }
 
+      // changing image using mouseover and mouseoff, creating fading effect on hover
+
       function fadeImage(){
 
         document.getElementById("me").style.opacity = "0.5";
@@ -496,6 +522,24 @@
         document.getElementById("me").style.opacity = "1";
 
       }
+
+      // typewriting animation using setTimeout
+      // click about me button to trigger this function and my intro
+
+      let i = 0;
+      let intro = "Hello & welcome to my food blog! My name is Yusra Syed. I am from Shrewsbury, Massachusetts and a rising junior at Babson College. I live with my mother and father, Umraz and Saqib, and my younger brother and sister, Rayyan and Yumna. Both my parents were born and raised in Bangalore, India. I grew up exposed to my vibrant, unique Indian culture, visiting cities all over India with my family. I especially love South Asian fashion & food. During the COVID-19 quarantine, I have had time to pursue my hobby of cooking. My mom has been teaching me to make some of her famous recipes, and I am sharing them with you all.... ENJOY!";
+      let speed = 70;
+
+      function typingIntro() {
+        if (i < intro.length) {
+          document.getElementById("myIntro").innerHTML += intro.charAt(i);
+          i++;
+          setTimeout(typingIntro, speed);
+
+        }
+      }
+
+      // triggering the functions
 
       document.getElementById("submit-btn").onclick = function(){
             checkForm();
@@ -522,6 +566,11 @@
 
       }
 
+      document.getElementById("aboutme-btn").onclick = function() {
+            typingIntro();
+
+      }
+      
 
     </script>
     
