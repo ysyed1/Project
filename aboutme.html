@@ -141,14 +141,16 @@
         
       }
 
-    #me{
-        width: 400px;
-        display: block; 
-        padding: 30px 30px 20px 150px;
+      #collage {
+        width: 875px;
+        height: 670px;
+        margin: 20px 30px 20px 120px;
+        position: relative;
+        left: 5%;
 
-    }
+      }
 
-    #body{
+      #body{
         width: 70%;
     }
 
@@ -173,8 +175,9 @@
     }
 
     #aboutme-btn {
-        position: relative;
-        left: 48%;
+        display: block;       
+        margin: 10px 0px 10px 575px;
+
 
     }
 
@@ -323,6 +326,15 @@
         color: black;
       }
 
+      li {
+        list-style-type: circle;
+
+      }
+
+      .blankspace {
+          color: white
+      }
+
 
 </style>
 
@@ -406,7 +418,7 @@
 
     <div id="body">
 
-    <img id="me" src="images/mugphoto.JPG" alt="headshot" title="headshot">
+    <img id="collage" src="images/websitecollage.JPEG" alt="collage" title="collage" >
 
     <button id="aboutme-btn">About Me</button>
 
@@ -414,8 +426,13 @@
 
     <h2>Contact Me</h2>
 
-    <p class="align"> Email: <a href="mailto:yusrasyed1@gmail.com">yusrasyed1@gmail.com</a> </p>
-    <p class="align">Instagram: @yusrasyed1</p>
+    <ul>
+
+        <li class="align"> Email: <a href="mailto:yusrasyed1@gmail.com">yusrasyed1@gmail.com</a> </li>
+
+        <li class="align">Instagram: @yusrasyed1</li>
+
+    </ul>
 
     <h2>Feedback Form</h2>
     <form id="feedback" method="post" action="/process">
@@ -481,8 +498,10 @@
 
         <button id="reset-btn" type="reset">Reset</button>
 
-
     </form>
+
+    <p class="blankspace">BLANK SPACE</p>
+    <p class="blankspace">BLANK SPACE</p>
 
     <div class="footer">
         <p><a href="sitemap.html">Site Map</a></p>
@@ -492,7 +511,21 @@
 
     <script>
 
-      // validating form, add processing aspect 
+      // changing image using mouseover and mouseoff, creating fading effect on hover
+
+      function fadeImage(){
+
+        document.getElementById("collage").style.opacity = "0.5";
+
+      }
+
+      function unfadeImage(){
+
+        document.getElementById("collage").style.opacity = "1";
+
+      }
+
+      // validating form
 
       function checkForm() {
 
@@ -523,19 +556,6 @@
 
       }
 
-      // changing image using mouseover and mouseoff, creating fading effect on hover
-
-      function fadeImage(){
-
-        document.getElementById("me").style.opacity = "0.5";
-
-      }
-
-      function unfadeImage(){
-
-        document.getElementById("me").style.opacity = "1";
-
-      }
 
       // typewriting animation using setTimeout
       // click about me button to trigger this function and my intro
@@ -555,35 +575,37 @@
 
       // triggering the functions
 
+      
+      document.getElementById("collage").onmouseover = function() {
+            fadeImage();
+
+      };
+
+      document.getElementById("collage").onmouseout = function() {
+            unfadeImage();
+
+      };
+
       document.getElementById("submit-btn").onclick = function(){
             checkForm();
 
-      }
+      };
 
       document.querySelector("h2").onclick = function() {
             firstClick();
 
-      }
+      };
 
       document.querySelector("h2").ondblclick = function() {
             secondClick();
 
-      }
+      };
 
-      document.getElementById("me").onmouseover = function() {
-            fadeImage();
-
-      }
-
-      document.getElementById("me").onmouseout = function() {
-            unfadeImage();
-
-      }
 
       document.getElementById("aboutme-btn").onclick = function() {
             typingIntro();
 
-      }
+      };
       
 
     </script>
